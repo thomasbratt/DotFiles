@@ -40,6 +40,6 @@ fi
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias ls='ls --color=auto --time-style=+'\''%Y-%m-%d %H:%M:%S'\'' '
 alias gd='clear;git diff '
-alias gl='clear;git log -n '
+alias gl='clear;git log --name-status -n '
 alias gs='clear;git status'
 

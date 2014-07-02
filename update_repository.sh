@@ -5,6 +5,7 @@
 ALL_DOT_FILES=(
     '.bashrc'
     '.gitconfig'
+    '.vimrc'
 )
 
 for F in "${ALL_DOT_FILES[@]}"; do
