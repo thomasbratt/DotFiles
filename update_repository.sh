@@ -8,16 +8,20 @@ ALL_DOT_FILES=(
     '.vimrc'
 )
 
-for F in "${ALL_DOT_FILES[@]}"; do
-    BEFORE=$(md5sum "$F" 2>/dev/null)
+Main(){
+    for f in "${ALL_DOT_FILES[@]}"; do
+        if cmp -s "$HOME/$f" "$f"; then
+            printf 'Unchanged       : %s\n' "$f"
+        else
+            cp "$HOME/$f" "$f"
+   
+            if cmp -s "$HOME/$f" "$f"; then
+                printf 'Updated         : %s\n' "$f"
+            else
+                printf 'Failed to update: %s\n' "$f"
+            fi 
+        fi
+    done
+}
 
-    cp "$HOME/$F" "$F"
-
-    AFTER=$(md5sum "$F" 2>/dev/null)
-
-    if [[ "$BEFORE" == "$AFTER" ]]; then
-        printf 'Unchanged: %s\n' "$F"
-    else
-        printf 'Updated  : %s\n' "$F"
-    fi
-done
+Main
