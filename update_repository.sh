@@ -5,6 +5,7 @@
 ALL_DOT_FILES=(
     '.bashrc'
     '.gitconfig'
+    '.gitignore'
     '.vimrc'
 )
 

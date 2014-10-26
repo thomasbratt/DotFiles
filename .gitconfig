@@ -4,3 +4,5 @@
 [core]
 [color]
 	ui = auto
+[core]
+	excludesfile = /home/thomas/.gitignore
