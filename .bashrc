@@ -44,4 +44,5 @@ alias la='ls -al'
 alias gd='clear;git diff '
 alias gl='clear;git log --name-status -n '
 alias gs='clear;git status'
+alias t='cd ~/tmp;clear;ls -al'
 
