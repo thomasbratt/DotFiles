@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Copy the latest versions of the dotfiles into the git repository.
+# Copy the latest versions of the dotfiles into the git reposifry.
 
 ALL_DOT_FILES=(
     '.bashrc'
     '.gitconfig'
     '.gitignore'
+    '.ssh/config'
     '.vimrc'
 )
 
@@ -14,6 +15,7 @@ Main(){
         if cmp -s "$HOME/$f" "$f"; then
             printf 'Unchanged       : %s\n' "$f"
         else
+            mkdir -p $(dirname "$f")
             cp "$HOME/$f" "$f"
    
             if cmp -s "$HOME/$f" "$f"; then
