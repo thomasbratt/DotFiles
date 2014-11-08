@@ -41,6 +41,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias gd='clear;git diff '
 alias gl='clear;git log --name-status -n '
 alias gs='clear;git status'
+alias jb='cd ~/Dropbox;clear;pwd;ls -al'
 alias jd='cd ~/docs;clear;pwd;ls -al'
 alias js='cd ~/source;clear;pwd;ls -al'
 alias jt='cd ~/tmp;clear;pwd;ls -al'
