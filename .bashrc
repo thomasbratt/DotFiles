@@ -38,12 +38,13 @@ fi
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias ls='ls --color=auto --time-style=+'\''%Y-%m-%d %H:%M:%S'\'' '
-alias ll='ls -l'
-alias la='ls -al'
 alias gd='clear;git diff '
 alias gl='clear;git log --name-status -n '
 alias gs='clear;git status'
-alias jt='cd ~/tmp;clear;ls -al'
-alias js='cd ~/source;clear;ls -al'
+alias jd='cd ~/docs;clear;pwd;ls -al'
+alias js='cd ~/source;clear;pwd;ls -al'
+alias jt='cd ~/tmp;clear;pwd;ls -al'
+alias la='ls -al'
+alias ll='ls -l'
+alias ls='ls --color=auto -h --time-style=+'\''%Y-%m-%d %H:%M:%S'\'' '
 
