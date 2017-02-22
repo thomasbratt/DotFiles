@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copy the latest versions of the dotfiles into the git reposifry.
+# Copy the latest versions of the dotfiles into the git repository.
 
 ALL_DOT_FILES=(
     '.bashrc'
@@ -11,13 +11,13 @@ ALL_DOT_FILES=(
     '.vimrc'
 )
 
-Main(){
+main(){
     for f in "${ALL_DOT_FILES[@]}"; do
         if cmp -s "$HOME/$f" "$f"; then
             printf 'Unchanged       : %s\n' "$f"
         else
             mkdir -p $(dirname "$f")
-            cp "$HOME/$f" "$f"
+            \cp "$HOME/$f" "$f"
    
             if cmp -s "$HOME/$f" "$f"; then
                 printf 'Updated         : %s\n' "$f"
@@ -28,4 +28,4 @@ Main(){
     done
 }
 
-Main
+main
