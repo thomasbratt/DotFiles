@@ -48,6 +48,7 @@ alias ga='git add'
 alias gc='git checkout'
 alias gd='git diff'
 alias gl='git log --decorate --name-status'
+alias glm='git log --decorate --name-status master..'
 alias gs='git status'
 
 alias gaa='git add -A'
