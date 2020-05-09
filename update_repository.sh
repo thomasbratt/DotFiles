@@ -1,9 +1,11 @@
-#!/bin/bash
+#!/bin/bash -u
 
 # Copy the latest versions of the dotfiles into the git repository.
 
 ALL_DOT_FILES=(
-    '.bashrc'
+    '.bash_aliases'
+    '.bash_aliases_work'
+    '.bash_terminal'
     '.gitconfig'
     '.gitignore'
     '.selected_editor'
@@ -28,4 +30,5 @@ main(){
     done
 }
 
-main
+main "$@"
+

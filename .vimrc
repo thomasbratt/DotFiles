@@ -6,5 +6,4 @@ set incsearch
 set ignorecase
 set smartcase
 retab
-colorscheme delek
 
