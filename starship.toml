@@ -1,0 +1,12 @@
+[aws]
+disabled=true
+
+[git_branch]
+symbol="branch "
+
+[package]
+symbol="package "
+
+[rust]
+symbol="rust "
+

@@ -19,7 +19,7 @@ alias gdc='git diff --cached'
 alias gpo='git push origin'
 alias gpr='git pull --rebase'
 alias gr='git restore'
-alias grs='git restore staged'
+alias grs='git restore --staged'
 
 alias jb='cd ~/Dropbox;clear;pwd;ls -al'
 alias jd='cd ~/Downloads;clear;pwd;ls -al'
