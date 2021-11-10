@@ -7,6 +7,9 @@ symbol="branch "
 [package]
 symbol="package "
 
+[python]
+symbol="python "
+
 [rust]
 symbol="rust "
 
