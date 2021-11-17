@@ -5,3 +5,7 @@
 	ui = auto
 [core]
 	excludesfile = /home/thomas/.gitignore
+[core]
+    pager = delta --line-numbers --side-by-side
+
+
