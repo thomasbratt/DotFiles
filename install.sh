@@ -3,6 +3,8 @@
 # -----------------------------------------------------------------------------
 # Replace the existing configuration files with soft links to the files
 # in this git repository.
+#
+# Should be run from the repository root.
 # -----------------------------------------------------------------------------
 
 BACKUP_FOLDER=~/tmp
