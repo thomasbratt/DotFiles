@@ -29,6 +29,8 @@ alias la='ls -al'
 alias ll='ls -l'
 alias ls='ls --color=auto -h --time-style=+'\''%Y-%m-%d %H:%M:%S'\'' '
 
+alias ps='procs --tree'
+
 alias sss='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 alias ssp='scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 

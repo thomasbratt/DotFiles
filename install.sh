@@ -3,8 +3,8 @@
 # -----------------------------------------------------------------------------
 # Replace the existing configuration files with soft links to the files
 # in this git repository.
-#
 # Should be run from the repository root.
+# All target links are relative to the current user's home directory.
 # -----------------------------------------------------------------------------
 
 BACKUP_FOLDER=~/tmp
@@ -15,6 +15,7 @@ MAPPINGS=(
     '.bashrc.d/selected_editor.sh'     'selected_editor.sh'
     '.bashrc.d/terminal.sh'            'terminal.sh'
     '.config/starship.toml'            'starship.toml'
+    '.config/procs/config.toml'        'procs.toml'
     '.gitconfig'                       'gitconfig'
     '.gitignore'                       'gitignore'
     '.ssh/config'                      'ssh_config'
@@ -28,6 +29,7 @@ link_dotfiles(){
         printf '%50s -> %-50s\n' "${HOME}/${linkname}" "${DIR_TARGET}/${target}" 
         \rm "${BACKUP_FOLDER}/${target}"                        2>/dev/null
         \mv "${HOME}/${linkname}" "${BACKUP_FOLDER}/${target}"  2>/dev/null
+        \mkdir -p "$(dirname ${HOME}/${linkname})"
         ln -s "${DIR_TARGET}/${target}" "${HOME}/${linkname}"   || return $?
     done
 }
