@@ -1,5 +1,6 @@
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias disk='lsblk -o TYPE,NAME,MOUNTPOINT,FSTYPE,SIZE,FSAVAIL,FSUSE%,FSUSED,UUID,PTUUID,PHY-SEC,LOG-SEC'
+alias docsync='/home/thomasbratt/docs/backups/sync_docs.sh'
 alias egrep='egrep --color=auto'
 alias end='_end(){ hexdump -C "$1" | grep --color -E " 0a| 0d|$"; };_end '
 alias fgrep='fgrep --color=auto'
