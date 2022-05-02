@@ -1,3 +1,6 @@
+*.iml
 *.swp
-.bash_aliases_work
+.idea/
+.vscode/
+/target/
 

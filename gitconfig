@@ -4,7 +4,7 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = /home/thomas/.gitignore
+	excludesfile = /home/thomasbratt/.gitignore
 [core]
     pager = delta --line-numbers --side-by-side
 
