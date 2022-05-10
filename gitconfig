@@ -9,3 +9,5 @@
     pager = delta --line-numbers --side-by-side
 
 
+[init]
+	defaultBranch = main
