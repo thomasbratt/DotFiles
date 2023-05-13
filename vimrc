@@ -14,6 +14,6 @@ set number
 set shiftwidth=4
 set smartcase
 set smarttab
-set syntax enable
 set tabstop=4
+syntax enable
 
