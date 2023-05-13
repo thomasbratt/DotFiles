@@ -4,8 +4,8 @@ A source controlled repository of my Linux shell configurations.
 
 * Bash
 * Git
+* Procs
 * SSH
-* Starship
 * VIM
 
 ## Installation
