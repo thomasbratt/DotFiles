@@ -1,3 +1,4 @@
+alias b='bat'
 alias disk='lsblk -o TYPE,NAME,MOUNTPOINT,FSTYPE,SIZE,FSAVAIL,FSUSE%,FSUSED,UUID,PTUUID,PHY-SEC,LOG-SEC'
 alias end='_end(){ hexdump -C "$1" | grep --color -E " 0a| 0d|$"; };_end '
 alias ga='git add'
