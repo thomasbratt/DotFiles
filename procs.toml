@@ -76,7 +76,7 @@ nonnumeric_search = false
 align = "Left"
 
 [[columns]]
-kind = "StartTime"
+kind = "ElapsedTime"
 style = "BrightWhite"
 numeric_search = false
 nonnumeric_search = true
