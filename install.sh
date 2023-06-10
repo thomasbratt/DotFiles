@@ -1,28 +1,31 @@
-#!/bin/bash -u
+#!/bin/bash
+
+set -u
 
 # -----------------------------------------------------------------------------
 # Replace the existing configuration files with soft links to the files
 # in this git repository.
 # Should be run from the repository root.
 # All target links are relative to the current user's home directory.
+# Note that any existing configuration files will be overwritten!
 # -----------------------------------------------------------------------------
 
-BACKUP_FOLDER=~/tmp
+BACKUP_FOLDER=~/tmp/dotfiles_backup
 DIR_TARGET="$(cd $(dirname $0);pwd)"
 MAPPINGS=(
     '.bashrc'                          'bashrc'
     '.bashrc.d/aliases.sh'             'aliases.sh'
     '.bashrc.d/selected_editor.sh'     'selected_editor.sh'
     '.bashrc.d/terminal.sh'            'terminal.sh'
-    '.config/starship.toml'            'starship.toml'
+    '.config/nvim/init.lua'            'neovim_init.lua'
     '.config/procs/config.toml'        'procs.toml'
     '.gitconfig'                       'gitconfig'
     '.gitignore'                       'gitignore'
     '.ssh/config'                      'ssh_config'
-    '.vimrc'                           'vimrc'
 )
 
 link_dotfiles(){
+    \mkdir -p "${BACKUP_FOLDER}"
     for ((i=0;i<"${#MAPPINGS[@]}";i+=2)); do
         local linkname="${MAPPINGS[i]}"
         local target="${MAPPINGS[i+1]}"

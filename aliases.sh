@@ -32,3 +32,5 @@ alias sss='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 alias syncdocs='/home/thomasbratt/src/backups/sync_docs.sh'
 alias synclibrary='/home/thomasbratt/src/backups/sync_library.sh'
 alias syncmusic='/home/thomasbratt/src/backups/sync_music.sh'
+alias vim='nvim'
+
