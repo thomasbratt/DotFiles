@@ -1,5 +1,4 @@
 -- May need to run :PackerSync
-
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -20,6 +19,9 @@ require('packer').startup(function(use)
 	-- Artic Nord colorscheme
 	use 'shaunsingh/nord.nvim'
 
+	-- Transparent backgrounds
+	use 'xiyaowong/transparent.nvim'
+
 	-- Rust
 	use 'neovim/nvim-lspconfig'
 	use 'simrat39/rust-tools.nvim'
@@ -27,7 +29,6 @@ require('packer').startup(function(use)
 	-- Debugging
 	use 'nvim-lua/plenary.nvim'
 	use 'mfussenegger/nvim-dap'
-
 end)
 
 -- Automatically set up your configuration after cloning packer.nvim
@@ -38,6 +39,12 @@ end
 
 -- Load Artic Nord colorscheme
 require('nord').set()
+
+-- Set background to transparent
+-- :TransparentEnable
+-- :TransparentDisable
+-- :TransparentToggle-
+require('transparent').setup()
 
 -- Set up rust tools
 local rt = require("rust-tools")
