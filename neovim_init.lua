@@ -16,7 +16,11 @@ require('packer').startup(function(use)
 	-- Packer plugin manager
 	use 'wbthomason/packer.nvim'
 
-	-- Artic Nord colorscheme
+	-- Colorschemes
+	use 'ellisonleao/gruvbox.nvim'
+	use 'glepnir/zephyr-nvim'
+	use 'projekt0n/github-nvim-theme'
+	use 'rose-pine/neovim'
 	use 'shaunsingh/nord.nvim'
 
 	-- Transparent backgrounds
@@ -37,8 +41,14 @@ if packer_bootstrap then
 	require('packer').sync()
 end
 
--- Load Artic Nord colorscheme
-require('nord').set()
+-- Set colorscheme
+vim.cmd('colorscheme github_dark')
+-- vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme nord')
+-- vim.cmd('colorscheme rose-pine')
+-- vim.cmd('colorscheme zephyr')
+
+
 
 -- Set background to transparent
 -- :TransparentEnable
@@ -59,10 +69,9 @@ rt.setup({
   },
 })
 
-local o = vim.o
-o.expandtab = true
-o.number = true    
-o.shiftwidth = 4
-o.smartindent = true
-o.tabstop = 4
+vim.o.expandtab = true
+vim.o.number = true    
+vim.o.shiftwidth = 4
+vim.o.smartindent = true
+vim.o.tabstop = 4
 
