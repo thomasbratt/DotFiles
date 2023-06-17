@@ -51,6 +51,8 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'                            
     use 'hrsh7th/vim-vsnip'
 
+    use 'nvim-treesitter/nvim-treesitter'
+
 end)
 
 -- Automatically set up your configuration after cloning packer.nvim
@@ -226,6 +228,21 @@ cmp.setup({
   },
 })
 
+-- Treesitter Plugin Setup 
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "lua", "rust", "toml" },
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting=false,
+  },
+  ident = { enable = true }, 
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
+}
 
 -- Vim editor settings
 vim.o.expandtab = true
