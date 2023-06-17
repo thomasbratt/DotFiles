@@ -1,2 +1,2 @@
-EDITOR=/usr/bin/vim
+EDITOR=/usr/bin/nvim
 
