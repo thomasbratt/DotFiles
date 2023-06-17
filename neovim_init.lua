@@ -37,20 +37,15 @@ require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig' 
     use 'simrat39/rust-tools.nvim'
 
-    -- Completion framework:
+    -- Rust setup
     use 'hrsh7th/nvim-cmp' 
-
-    -- LSP completion source:
     use 'hrsh7th/cmp-nvim-lsp'
-
-    -- Useful completion sources:
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'hrsh7th/cmp-vsnip'                             
     use 'hrsh7th/cmp-path'                              
     use 'hrsh7th/cmp-buffer'                            
     use 'hrsh7th/vim-vsnip'
-
     use 'nvim-treesitter/nvim-treesitter'
 
 end)
@@ -176,7 +171,7 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
 -- Completion Plugin Setup
-local cmp = require'cmp'
+local cmp = require 'cmp'
 cmp.setup({
   -- Enable LSP snippets
   snippet = {
@@ -227,6 +222,10 @@ cmp.setup({
       end,
   },
 })
+--
+-- Command:
+-- RustRunnables
+require('rust-tools').runnables.runnables()
 
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
@@ -243,6 +242,12 @@ require('nvim-treesitter.configs').setup {
     max_file_lines = nil,
   }
 }
+
+-- Custom keybindings
+vim.keymap.set("n", "<C-r>", ":RustRunnables<CR>", { silent = true })
+vim.keymap.set("n", "<C-x>", ":xa<CR>", { silent = true })
+vim.keymap.set("n", "<S-j>", ":bprevious<CR>", { silent = true })
+vim.keymap.set("n", "<S-k>", ":bnext<CR>", { silent = true })
 
 -- Vim editor settings
 vim.o.expandtab = true
