@@ -246,8 +246,9 @@ require('nvim-treesitter.configs').setup {
 -- Custom keybindings
 vim.keymap.set("n", "<C-j>", ":bprevious<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>", ":bnext<CR>", { silent = true })
-vim.keymap.set("n", "<C-q>", ":xa<CR>", { silent = true })
 vim.keymap.set("n", "<C-m>", ":RustRunnables<CR>", { silent = true })
+vim.keymap.set("n", "<C-n>", ":new<CR>", { silent = true })
+vim.keymap.set("n", "<C-q>", ":xa<CR>", { silent = true })
 vim.keymap.set("n", "<C-s>", ":w<CR>", { silent = true })
 vim.keymap.set("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "<C-x>", ":wa<CR>:bd<CR>:bnext<CR>", { silent = true })
